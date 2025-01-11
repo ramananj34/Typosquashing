@@ -6,7 +6,6 @@ HOST = "192.168.0.35"
 PORT = 8000
 
 class TyposquatServer(BaseHTTPRequestHandler):
-    
     def do_GET(self):
         params = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
         test_url = params.get('url', [None])[0]
